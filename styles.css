@@ -371,6 +371,8 @@ main {
   to{scale: 1 1;}
 }
 
+/* dog ? */
+
 
 .dog {
   width: 150px;
@@ -381,6 +383,128 @@ main {
   left: calc(100vw - 12rem);
   z-index: 100;
 }
+
+.head {
+  width: 50%;
+  height: 50%;
+  background-color: brown;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+
+.body {
+  width: 75%;
+  height: 50%;
+  background-color: gray;
+  float: right;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+
+.main-head {
+  width: 70%;
+  height: 70%;
+  background-color: gray;
+  border-radius: 50%;
+  float: right;
+  position: relative;
+  top: 9px;
+}
+
+.main-snout {
+  width: 70%;
+  height: 40%;
+  background-color: gray;
+  border-radius: 40%;
+  position: relative;
+  top: 32px;
+  left: 5px;
+}
+
+.neck {
+  width: 50%;
+  height: 50%;
+  background-color: black;
+  position: relative;
+  left: 37px;
+  top: 10px;
+
+}
+
+.chest {
+  width: 40%;
+  height: 80%;
+  background-color: pink;
+  border-radius: 50%;
+  position: relative;
+  right: 10px;
+  top: -4px;
+}
+
+.back {
+  width: 90%;
+  height: 80%;
+  background-color: purple;
+  border-radius: 50%;
+  position: relative;
+  top: -60px;
+  left: 5px;
+  transform: rotate(15deg);
+}
+
+.leg1 {
+  width: 20%;
+  height: 50%;
+  background-color: green;
+  border-radius: 50%;
+  position: relative;
+  top: -85px;
+  right: 3px;
+}
+
+.paw1 {
+  width: 25%; 
+  height: 15%;
+  background-color: yellow;
+  border-radius: 40%;
+  position: relative;
+  top: -115px;
+  right: 10px;
+}
+
+.leg2 {
+  width: 50%;
+  height: 30%;
+  background-color: green;
+  border-radius: 50%;
+  position: relative;
+  top: -108px;
+  left: 45px;
+  transform: rotate(7deg);
+}
+
+.paw2 {
+  width: 25%; 
+  height: 15%;
+  background-color: yellow;
+  border-radius: 40%;
+  position: relative;
+  top: -125px;
+  left: 65px;
+}
+
+.tail {
+  width: 50%;
+  height: 15%;
+  background-color: blue;
+  border-radius: 30%;
+  position: relative;
+  top: -155px;
+  left: 70px;
+  transform: rotate(7deg);
+}
+
+
 
 
 /*Hover and transitions*/
