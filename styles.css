@@ -366,13 +366,11 @@ main {
 
 }
 
-@keyframes scroll-watcher{
-
-  to{scale: 1 1;}
+@keyframes scroll-watcher {
+  to { scale: 1 1; }
 }
 
 /* dog ? */
-
 
 .dog {
   width: 150px;
@@ -388,8 +386,8 @@ main {
   width: 50%;
   height: 50%;
   background-color: brown;
-  animation: scroll-watcher linear;
-  animation-timeline: scroll();
+  /*animation: scroll-watcher linear;
+  animation-timeline: scroll();*/
 }
 
 .body {
@@ -397,8 +395,8 @@ main {
   height: 50%;
   background-color: gray;
   float: right;
-  animation: scroll-watcher linear;
-  animation-timeline: scroll();
+  /*animation: scroll-watcher linear;
+  animation-timeline: scroll();*/
 }
 
 .main-head {
@@ -407,8 +405,19 @@ main {
   background-color: gray;
   border-radius: 50%;
   float: right;
+  right: 0px;
   position: relative;
   top: 9px;
+  animation: animate-head linear;
+  animation-timeline: scroll();
+  z-index: 3;
+}
+
+@keyframes animate-head {
+  50% {
+    right: 10px;
+    top: 14px;
+  }
 }
 
 .main-snout {
@@ -419,7 +428,19 @@ main {
   position: relative;
   top: 32px;
   left: 5px;
+  animation: animate-snout linear;
+  animation-timeline: scroll();
+  z-index: 3;
 }
+
+@keyframes animate-snout {
+  50% {
+    left: -5px;
+    top: 37px;
+  }
+}
+
+
 
 .neck {
   width: 50%;
@@ -428,7 +449,17 @@ main {
   position: relative;
   left: 37px;
   top: 10px;
+  animation: animate-neck linear;
+  animation-timeline: scroll();
 
+}
+
+@keyframes animate-neck {
+  50% {
+    transform: rotate(-10deg);
+    left: 27px;
+    top: 15px;
+  }
 }
 
 .chest {
@@ -439,6 +470,16 @@ main {
   position: relative;
   right: 10px;
   top: -4px;
+  animation: animate-chest linear;
+  animation-timeline: scroll();
+  z-index: 2;
+}
+
+@keyframes animate-chest {
+  50% {
+    transform: rotate(-25deg);
+  }
+
 }
 
 .back {
@@ -450,6 +491,17 @@ main {
   top: -60px;
   left: 5px;
   transform: rotate(15deg);
+  animation: animate-dog linear;
+  animation-timeline: scroll();
+}
+
+@keyframes animate-dog {
+  50% {
+    transform: rotate(-25deg);
+    top: -85px;
+    left: 10px;
+  }
+
 }
 
 .leg1 {
@@ -460,6 +512,42 @@ main {
   position: relative;
   top: -85px;
   right: 3px;
+  animation: animate-frontlegone linear;
+  animation-timeline: scroll();
+  z-index: 3;
+}
+
+@keyframes animate-frontlegone {
+  50% {
+    transform: rotate(-45deg);
+    top: -85px;
+    right: 0px;
+  }
+
+  100% {
+    transform: rotate(120deg);
+    top: -118px;
+    right: 15px;
+  }
+}
+
+.leg1back {
+  width: 20%;
+  height: 50%;
+  background-color: green;
+  border-radius: 50%;
+  position: relative;
+  top: -125px;
+  right: 3px;
+  animation: animate-frontlegtwo linear;
+  animation-timeline: scroll();
+}
+
+@keyframes animate-frontlegtwo {
+  50% {
+    transform: rotate(-45deg);
+    right: 0px;
+  }
 }
 
 .paw1 {
@@ -468,8 +556,47 @@ main {
   background-color: yellow;
   border-radius: 40%;
   position: relative;
-  top: -115px;
+  top: -155px;
   right: 10px;
+  animation: animate-frontpawone linear;
+  animation-timeline: scroll();
+  z-index: 3;
+}
+
+@keyframes animate-frontpawone {
+  50% {
+    top: -153px;
+    right: 3px;  
+  }
+
+  75% {
+    transform: rotate(-15deg);
+  }
+
+  100% {
+    top: -210px;
+    right: 40px;
+    transform: rotate(-10deg);
+  }
+}
+
+.paw1back {
+  width: 25%; 
+  height: 15%;
+  background-color: yellow;
+  border-radius: 40%;
+  position: relative;
+  top: -167px;
+  right: 10px;
+  animation: animate-frontpawtwo linear;
+  animation-timeline: scroll();
+}
+
+@keyframes animate-frontpawtwo {
+  50% {
+    top: -165px;
+    right: 3px; 
+  }
 }
 
 .leg2 {
@@ -478,9 +605,20 @@ main {
   background-color: green;
   border-radius: 50%;
   position: relative;
-  top: -108px;
+  top: -148px;
   left: 45px;
   transform: rotate(7deg);
+  animation: animate-backleg linear;
+  animation-timeline: scroll();
+}
+
+@keyframes animate-backleg {
+  50% {
+    transform: rotate(97deg);
+    top: -170px;
+    left: 65px;
+  }
+
 }
 
 .paw2 {
@@ -489,8 +627,19 @@ main {
   background-color: yellow;
   border-radius: 40%;
   position: relative;
-  top: -125px;
+  top: -175px;
   left: 65px;
+  animation: animate-backpaw linear;
+  animation-timeline: scroll();
+}
+
+@keyframes animate-backpaw {
+  50% {
+    transform: rotate(-20deg);
+    top: -177px;
+    left: 70px;
+  }
+
 }
 
 .tail {
@@ -499,9 +648,20 @@ main {
   background-color: blue;
   border-radius: 30%;
   position: relative;
-  top: -155px;
+  top: -205px;
   left: 70px;
   transform: rotate(7deg);
+  animation: animate-tail linear;
+  animation-timeline: scroll();
+}
+
+@keyframes animate-tail {
+  50% {
+    transform: rotate(-45deg);
+    top: -285px;
+    left: 80px;
+  }
+
 }
 
 
